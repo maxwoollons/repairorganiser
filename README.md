@@ -26,7 +26,7 @@ Insert gif or link to demo
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Design1](https://i.ibb.co/7CWM0bJ/design1.png)
 
 
 ## License
