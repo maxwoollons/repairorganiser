@@ -20,12 +20,14 @@
 
 .navbar div {
   font-size: 20px;  
+  cursor: default;
 }
 
 
-.navbar div:hover {
+.navbar .navitem:hover {
   color: rgb(51, 53, 54);  
   border-bottom: 2px solid black;
+  cursor: pointer;
 }
 
 .container {

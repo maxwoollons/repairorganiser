@@ -9,6 +9,9 @@ useEffect(() => {
   .then(data => {
       setIssues(data)
       console.log(data)
+      if (data.length === 0) {
+        console.log("No issues")
+      }
   })
 }, [])
 
@@ -29,6 +32,7 @@ useEffect(() => {
                         </div>
                         <div className='issue-card-body'>
                          <p>{issue.note}</p>
+                         <p>by {issue.Date}</p>
                         </div>
                   </div>
             )
