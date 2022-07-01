@@ -1,6 +1,7 @@
 import express from 'express';
 import { allRepairs } from '../models/repair.js';
 import { addRepair } from '../models/repair.js';
+import { db_conn } from '../database.js';
 
 const repairController = express.Router()
 
@@ -28,6 +29,20 @@ repairController.post('/add',(req,res)=>{
     )
 }
 )
+
+//delete repair id
+repairController.delete('/delete/:id',(req,res)=>{
+    console.log(req.params.id)
+    db_conn.query("DELETE FROM repair.repairs WHERE id = ?",[req.params.id]).then(data=>{
+        res.status(200).json(data)
+    }
+    ).catch(err=>{
+        res.status(500).json(err)
+    }
+    )
+}
+)
+
 
 
 
