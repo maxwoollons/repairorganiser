@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import './App.css'
-import Issues from './components/issues.jsx'
+import '../App.css'
+import Shippinginfo from './Shippinginfo';
 import { BrowserRouter } from "react-router-dom";
-import Navbar from './components/navbar';
+import Navbar from './navbar';
 
 
-function App() {
+function Shipping() {
   const [count, setCount] = useState(0)
 
   return (
@@ -13,10 +13,10 @@ function App() {
       <Navbar/>
     <div className='container'>
 
-      <Issues/>
+      <Shippinginfo/>
     </div>
     </div>
   )
 }
 
-export default App
+export default Shipping

@@ -10,8 +10,8 @@ function navbar() {
 
   return (
     <nav className='navbar'>
-    <div className="navitem">Home</div>
-    <div className="navitem">Add Issue</div>
+    <a href="/"><div className="navitem">Home</div></a>
+    <a href="/addissue"><div className="navitem">Add Issue</div></a>
     <div>{date}</div>
     </nav>
   )

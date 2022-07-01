@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
 
-function issues() {
+function shippinginfo() {
   const [issues, setIssues] = useState([])
 useEffect(() => {
   fetch("http://localhost:8000/api/repairs/all")
@@ -41,4 +41,4 @@ useEffect(() => {
   
 }
 
-export default issues
+export default shippinginfo

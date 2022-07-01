@@ -2,12 +2,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 
 .navbar {
   width: 100%;
-  height: 50px;
+  height: 60px;
   background-color: #f8f9fa;
   border-bottom: 1px solid #e9ecef;
   display: flex;
@@ -19,7 +20,7 @@
 
 
 .navbar div {
-  font-size: 20px;  
+  font-size: 29px;  
   cursor: default;
 }
 
@@ -34,6 +35,103 @@
   padding: 20px;
 }
 
-.issues-body {
-  border: 1px solid black;
+.issue-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #e2e5e7;
+  padding: 20px;
+  box-shadow: #c4c7ca 0px 1px 5px 0px;
+  border-radius: 5px;
+}
+
+.issues-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+
+
+}
+
+.complete-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbtn {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+  margin: 10px;
+  background-color: #eaf1ec;
+  border: none;
+  box-shadow: #c2cdc5 0px 1px 5px 0px;
+  font-size: 30px;
+  border-radius: 5px;
+}
+
+  .navbtn:hover {
+    transition: 0.4s ease-in-out;
+    background-color: rgb(157, 157, 157);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.issuecontainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #f0f3f5;
+  padding: 20px;
+  box-shadow: #c4c7ca 0px 1px 5px 0px;
+  border-radius: 5px;
+
+}
+
+.issuecontainer form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.issuecontainer form input {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e2e5e7;
+  box-shadow: #c4c7ca 0px 1px 5px 0px;
+}
+
+.issuecontainer form .submit {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.issuecontainer form .submit:hover {
+  transition: 0.4s ease-in-out;
+  background-color: rgb(157, 157, 157);
+}
+
+.issuecontainer form label {
+  margin-bottom: 20px;
 }
