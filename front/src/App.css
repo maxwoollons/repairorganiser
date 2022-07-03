@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -151,4 +151,54 @@ a button {
 
 .issuefine {
   background-color: #e2e5e7;
+}
+
+.archivedbtn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+
+
+}
+
+.archivedtitle{
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #f0f3f5;
+  padding: 20px;
+  box-shadow: #c4c7ca 0px 1px 5px 0px;
+}
+
+
+.homebtndiv {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+
+}
+.home {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out; 
+}
+
+.home:hover {
+  background-color: rgb(157, 157, 157);
 }
