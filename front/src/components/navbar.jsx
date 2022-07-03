@@ -5,7 +5,7 @@ import "../App.css"
 
 function navbar() {
   var today = new Date(),
-      date =  today.getDate()  + '-' + (today.getMonth() + 1) + "-" + today.getFullYear()
+      date =  today.getDate()  + ' / ' + (today.getMonth() + 1) + " / " + today.getFullYear()
 
 
   return (

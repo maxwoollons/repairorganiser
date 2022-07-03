@@ -135,3 +135,20 @@ a {
 .issuecontainer form label {
   margin-bottom: 20px;
 }
+
+a button {
+  cursor: pointer;
+}
+
+
+.issue-card-due {
+  background-color: rgb(236, 45, 45);
+}
+
+.issue-card-warning {
+  background-color: rgb(255, 255, 0);
+}
+
+.issuefine {
+  background-color: #e2e5e7;
+}

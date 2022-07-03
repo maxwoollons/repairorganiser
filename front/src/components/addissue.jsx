@@ -5,6 +5,11 @@ import "../App.css"
 const addissue = () => {
     function onSubmit(e){
         e.preventDefault();
+        
+        // validate here max
+
+
+
         fetch('http://localhost:8000/api/repairs/add',
         {
             method: 'POST',
@@ -21,7 +26,11 @@ const addissue = () => {
                 })
                 }).then(res => res.json())
                 .then(data => {
-                    console.log(data)
+                    window.alert("Issue added")
+                    location.href = "/"
+                }
+                ).catch(err => {
+                    window.alert("Error adding issue")
                 }
                 )
 
