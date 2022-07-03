@@ -63,6 +63,9 @@ function issues() {
     
    
     function deleteIssue(id) { 
+
+      if(window.confirm("Are you sure you have completed this issue?")){
+
       fetch(`http://localhost:8000/api/repairs/archive/${id}`, {
         method: 'PUT',
         headers: {
@@ -74,6 +77,7 @@ function issues() {
         location.reload()
       }
       )
+    }
   
     }
 
@@ -166,6 +170,7 @@ function issues() {
         if(data.user){
           setLoginStatus(true)
         }
+        location.reload()
       }
       )
 
