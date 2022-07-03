@@ -202,3 +202,61 @@ table {
 .home:hover {
   background-color: rgb(157, 157, 157);
 }
+
+
+.formcontainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: #c4c7ca 0px 1px 5px 0px;
+  border-radius: 5px;
+ 
+}
+
+
+.formcontainer form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+
+.submitbtn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.logintitle {
+  text-align: center;
+  color: red;
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+form label {
+  margin-bottom: 20px;
+
+}
+
+form input {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e2e5e7;
+  box-shadow: #c4c7ca 0px 1px 5px 0px;
+  
+}
