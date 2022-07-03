@@ -27,6 +27,7 @@ Insert gif or link to demo
 ## Screenshots
 
 ![Design1](https://i.ibb.co/7CWM0bJ/design1.png)
+![RealDesign1](https://i.ibb.co/561MRrx/design2.png)
 
 
 ## License
