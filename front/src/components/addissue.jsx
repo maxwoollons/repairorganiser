@@ -1,8 +1,22 @@
 import React from 'react'
 import Navbar from './navbar'
 import "../App.css"
+import { useEffect } from 'react'
 
 const addissue = () => {
+    useEffect(() => {
+        fetch('http://localhost:8000/api/login').then(res => res.json())
+        .then(data => {
+            if(data.username){
+                console.log("Logged in")
+            }
+            else{
+                location.href = "/"
+            }
+        }
+        )
+    }, [])
+    
     function onSubmit(e){
         e.preventDefault();
         

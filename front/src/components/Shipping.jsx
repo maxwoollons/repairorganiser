@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import '../App.css'
 import Shippinginfo from './Shippinginfo';
 import { BrowserRouter } from "react-router-dom";
@@ -7,6 +7,19 @@ import Navbar from './navbar';
 
 function Shipping() {
   const [count, setCount] = useState(0)
+  useEffect(() => {
+    fetch('http://localhost:8000/api/login').then(res => res.json())
+    .then(data => {
+        if(data.username){
+            console.log("Logged in")
+        }
+        else{
+            location.href = "/"
+        }
+    }
+    )
+}, [])
+  
 
   return (
     <div className="App">

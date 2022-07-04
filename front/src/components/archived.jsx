@@ -4,9 +4,21 @@ import '../App.css'
 import { useEffect,useState } from 'react'
 
 const Archived = () => {
-    useEffect(() => {
-        fetchItems();
-    }, []);
+
+     useEffect(() => {
+        
+        fetch('http://localhost:8000/api/login').then(res => res.json())
+        .then(data => {
+            if(data.username){
+                console.log("Logged in")
+            }
+            else{
+                location.href = "/"
+            }
+        }
+        )
+        fetchItems()
+    }, [])
     const [items, setItems] = useState([]);
     const fetchItems = async () => {
         const data = await fetch('http://localhost:8000/api/repairs/archived');

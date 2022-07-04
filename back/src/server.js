@@ -22,7 +22,7 @@ const port = 8000;
 
 app.use('/api/repairs', repairController)
 app.use('/api/login', loginController)
-app.use('/', proxy('http://localhost:3000'));
+app.use('/', proxy('http://localhost:4173/'));
 
 
 
