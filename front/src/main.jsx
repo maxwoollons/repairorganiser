@@ -10,11 +10,11 @@ import Archived from './components/archived.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
   <Switch>
-    <Route path='/repairorganiser/' component={App}/>
+    <Route path='/' component={App}/>
 
-      <Route path='/repairorganiser/shipping' component={Shipping}/>
-      <Route path='/repairorganiser/addissue' component={Addissue}/>
-      <Route path='/repairorganiser/archived' component={Archived}/> 
+      <Route path='/shipping' component={Shipping}/>
+      <Route path='/addissue' component={Addissue}/>
+      <Route path='/archived' component={Archived}/> 
       <Route>404 not found</Route>
     </Switch>
   </>

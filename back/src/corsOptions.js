@@ -1,5 +1,5 @@
 // const allowedOrigins = ['http://localhost:3000'];
-const allowedOrigins = ['https://maxwoollons.github.io','http://localhost:3000'];
+const allowedOrigins = ['http://jbrepair.xyz/','http://localhost:3000'];
 
 const corsOptions = {
 
