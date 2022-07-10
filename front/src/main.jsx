@@ -2,20 +2,20 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import Navbar from './components/navbar.jsx'
-import { BrowserRouter,Routes,Route } from "react-router-dom";
+import {Switch,Link,Route} from "wouter";
 import Shipping from './components/Shipping.jsx'
 import Addissue from './components/addissue.jsx'
 import Archived from './components/archived.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<App/>}/>
-      <Route path='/shipping' element={<Shipping/>}/>
-      <Route path='/addissue' element={<Addissue/>}/>
-      <Route path='/archived' element={<Archived/>}/>
-        
-    </Routes>
-   
-  </BrowserRouter>
+  <>
+  <Switch>
+    <Route path='/repairorganiser/' component={App}/>
+
+      <Route path='/repairorganiser/shipping' component={Shipping}/>
+      <Route path='/repairorganiser/addissue' component={Addissue}/>
+      <Route path='/repairorganiser/archived' component={Archived}/> 
+      <Route>404 not found</Route>
+    </Switch>
+  </>
 )

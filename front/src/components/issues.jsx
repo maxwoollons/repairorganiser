@@ -2,7 +2,7 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import 'remixicon/fonts/remixicon.css'
 import Navbar from './navbar'
-
+import axios from 'axios'
 
 
 function issues() {
@@ -25,22 +25,37 @@ function issues() {
 
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/login').then(res => res.json())
-    .then(data => {
-      if(data.username){
-        setLoginStatus("True")
-        fetch("http://localhost:8000/api/repairs/all")
-        .then(res => res.json())
-        .then(data => {
-            setIssues(data)
-            if (data.length === 0) {
-            console.log("No issues")
+      //axios call to check if user is logged in
+      axios.get('http://localhost:8000/api/login', {withCredentials: true})
+      .then(res => {
+        console.log(res.data.username)
+          if (res.data.username) {
+              setLoginStatus('True')
+              fetchIssues()
           }
-      })
-      }
-      else{
-        setLoginStatus("False")
-      }
+          else {
+              setLoginStatus('False')
+          }
+      
+
+
+    // fetch('http://localhost:8000/api/login').then(res => res.json())
+    // .then(data => {
+    //   console.log(data)
+    //   if(data.username){
+    //     setLoginStatus("True")
+    //     fetch("http://localhost:8000/api/repairs/all")
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         setIssues(data)
+    //         if (data.length === 0) {
+    //         console.log("No issues")
+    //       }
+    //   })
+    //   }
+    //   else{
+    //     setLoginStatus("False")
+    //   }
       
       
     }
@@ -99,7 +114,7 @@ function issues() {
 
       <div className='issues-header'>
           <a href='/'><button className='navbtn'>Issues</button></a>
-          <a href='/shipping'><button className='navbtn'>Dispatch</button></a>
+          <a href='./shipping'><button className='navbtn'>Dispatch</button></a>
       </div>
       <div className='issues-body'>
           {issues.map(issue => {
@@ -146,7 +161,7 @@ function issues() {
           })}
   
       </div>
-      <a href="/archived"><button className="archivedbtn"><i className="ri-archive-line"> </i>archived issues</button></a>
+      <a href="/repairorganiser/archived"><button className="archivedbtn"><i className="ri-archive-line"> </i>archived issues</button></a>
       </div>
       </>
     )
@@ -157,23 +172,23 @@ function issues() {
         username: document.getElementById('username').value,
         password: document.getElementById('password').value
       }
-      fetch('http://localhost:8000/api/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'SameSite': 'None'
-          
-        },
-        body: JSON.stringify(details)
-      }).then(res => res.json())
-      .then(data => {
-        if(data.user){
-          setLoginStatus(true)
+      //axios post request to login with cors headers
+      axios.post('http://localhost:8000/api/login', details,{withCredentials: true})
+      
+
+      .then(res => {
+        console.log(res.data)
+        if(res.data.username){
+          setLoginStatus("True")
+          location.reload()
         }
-        location.reload()
+        else{
+          alert("Invalid username or password")
+        }
       }
       )
-
+      
+      
     }
 
 

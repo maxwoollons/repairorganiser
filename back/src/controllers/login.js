@@ -22,7 +22,7 @@ loginController.post('/',(req,res)=>{
             username: "208",
             password: "208"
         } 
-        res.status(200).json({message:"You are logged in"})
+        res.status(200).json(req.session.user)
      }
 })
 

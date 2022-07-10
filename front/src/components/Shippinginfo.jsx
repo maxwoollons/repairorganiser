@@ -10,6 +10,7 @@ function shippinginfo() {
         <a href='/'><button className='navbtn'>Issues</button></a>
         <a href='/shipping'><button className='navbtn'>Dispatch List</button></a>
     </div>
+    <h1>Im adding this soon hush storeroom kittens</h1>
    
     </div>
   )

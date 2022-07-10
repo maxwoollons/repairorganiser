@@ -5,8 +5,12 @@ import { useEffect } from 'react'
 
 const addissue = () => {
     useEffect(() => {
-        fetch('http://localhost:8000/api/login').then(res => res.json())
+        fetch('http://localhost:8000/api/login',
+        {
+            credentials: 'include'
+        }).then(res => res.json())
         .then(data => {
+            console.log(data)
             if(data.username){
                 console.log("Logged in")
             }
@@ -41,7 +45,7 @@ const addissue = () => {
                 }).then(res => res.json())
                 .then(data => {
                     window.alert("Issue added")
-                    location.href = "/"
+                    location.href = "/repairorganiser/"
                 }
                 ).catch(err => {
                     window.alert("Error adding issue")

@@ -7,7 +7,10 @@ const Archived = () => {
 
      useEffect(() => {
         
-        fetch('http://localhost:8000/api/login').then(res => res.json())
+        fetch('http://localhost:8000/api/login',
+        {
+            credentials: 'include'
+        }).then(res => res.json())
         .then(data => {
             if(data.username){
                 console.log("Logged in")
@@ -45,7 +48,7 @@ const Archived = () => {
             </thead>
             <tbody>
                 {items.map(item => (
-                    <tr key={item.idrepairs}>
+                    <tr key={item.id}>
                         <td>{item.idrepairs}</td>
                         <td>{item.note}</td>
                         <td>{item.Date}</td>

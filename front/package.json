@@ -1,4 +1,5 @@
 {
+  "homepage": "https://maxwoollons.github.io/repairorganiser/",
   "name": "repairorganiser",
   "private": true,
   "version": "0.0.0",
@@ -8,10 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.3.0",
-    "remixicon": "^2.5.0"
+    "remixicon": "^2.5.0",
+    "wouter": "^2.8.0-alpha.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",

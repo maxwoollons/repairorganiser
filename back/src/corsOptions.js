@@ -1,5 +1,10 @@
-const allowedOrigins = ['http://localhost:3000', 'http://localhost:8000'];
+// const allowedOrigins = ['http://localhost:3000'];
+const allowedOrigins = ['https://maxwoollons.github.io','http://localhost:3000'];
+
 const corsOptions = {
+
+
+credentials: true,
 
     origin: (origin, callback) => {
 
