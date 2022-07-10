@@ -24,7 +24,7 @@ const Archived = () => {
     }, [])
     const [items, setItems] = useState([]);
     const fetchItems = async () => {
-        const data = await fetch('http://localhost:8000/api/repairs/archived');
+        const data = await fetch('http://220.239.3.153:8000/api/repairs/archived');
         const items = await data.json();
         setItems(items);
         console.log(items);

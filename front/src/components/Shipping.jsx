@@ -8,7 +8,7 @@ import Navbar from './navbar';
 function Shipping() {
   const [count, setCount] = useState(0)
   useEffect(() => {
-    fetch('http://localhost:8000/api/login',
+    fetch('http://220.239.3.153:8000/api/login',
     {
         credentials: 'include'
     }).then(res => res.json())

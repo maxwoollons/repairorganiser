@@ -11,7 +11,7 @@ function issues() {
 
 
   function fetchIssues() {
-    fetch("http://localhost:8000/api/repairs/all")
+    fetch("http://220.239.3.153:8000/api/repairs/all")
     .then(res => res.json())
     .then(data => {
         setIssues(data)
@@ -26,7 +26,7 @@ function issues() {
 
   useEffect(() => {
       //axios call to check if user is logged in
-      axios.get('http://localhost:8000/api/login', {withCredentials: true})
+      axios.get('http://220.239.3.153:8000/api/login', {withCredentials: true})
       .then(res => {
         console.log(res.data.username)
           if (res.data.username) {
@@ -81,7 +81,7 @@ function issues() {
 
       if(window.confirm("Are you sure you have completed this issue?")){
 
-      fetch(`http://localhost:8000/api/repairs/archive/${id}`, {
+      fetch(`http://220.239.3.153:8000/api/repairs/archive/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -173,7 +173,7 @@ function issues() {
         password: document.getElementById('password').value
       }
       //axios post request to login with cors headers
-      axios.post('http://localhost:8000/api/login', details,{withCredentials: true})
+      axios.post('http://http://220.239.3.153:8000/api/login', details,{withCredentials: true})
       
 
       .then(res => {
