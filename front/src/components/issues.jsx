@@ -173,7 +173,7 @@ function issues() {
         password: document.getElementById('password').value
       }
       //axios post request to login with cors headers
-      axios.post('http://http://220.239.3.153:8000/api/login', details,{withCredentials: true})
+      axios.post('http://220.239.3.153:8000/api/login', details,{withCredentials: true})
       
 
       .then(res => {
