@@ -14,6 +14,10 @@ To deploy this project run
 ```
 
 
+Front: https://github.com/maxwoollons/repairorganiserfront
+Back: https://github.com/maxwoollons/repairorganiserback
+
+
 ## Demo
 
 [https://jbrepair.xyz/](https://jbrepair.xyz/)
